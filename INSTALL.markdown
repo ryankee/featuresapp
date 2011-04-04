@@ -14,7 +14,7 @@ currently looks like this:
 - gunicorn 0.12.1
 - rsync 3.0.7
 
-Our installation process:
+Our installation process for production servers:
 
     $ sudo aptitude update
     $ sudo aptitude install postgresql postgresql-client pgadmin3
@@ -36,3 +36,33 @@ Our installation process:
     $ sudo pip install Django -E featuresapp
     $ sudo pip install gunicorn -E featuresapp
     $ sudo aptitude install rysnc
+
+Once the production server is set up we do the following:
+
+    $ git clone git://github.com/bytecollective/featuresapp.git
+    $ cd featuresapp
+    $ vim private_info.py
+    def private_env():
+        ''' Set the private env data (No need to call) '''
+        env.user = 'username'
+        env.password = 'password'
+        env.dest = 'destination'
+        env.hosts = ['host']
+        return env
+    $ cd featuresapp
+    $ vim production_settings.py
+    from settings import *
+
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'NAME': 'databasename',
+            'USER': 'username',
+            'PASSWORD': 'password',
+            'HOST': '',
+            'PORT': '',
+        }
+    }
+    $ fab fresh_deploy
+
+At this point featuresapp should be running on the server.
