@@ -1,7 +1,7 @@
 FEATURES APP
 ============
 
-Manage, track, and organize projects around features.
+Manage, track, and organize projects around features. View the [demo](http://featuresapp.com/demo/) of our current progress.
 
 INSTALLATION
 ------------
