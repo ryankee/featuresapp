@@ -37,6 +37,9 @@ Our installation process for production servers:
     $ sudo pip install gunicorn -E featuresapp
     $ sudo aptitude install rysnc
 
+START DEVELOPING
+----------------
+
 Once the production server is set up we do the following:
 
     $ git clone git://github.com/bytecollective/featuresapp.git
