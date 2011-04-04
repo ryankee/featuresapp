@@ -10,7 +10,7 @@ FeaturesApp is built on Django and so any django set up will work. Ours
 currently looks like this:
 
 - Ubuntu 10.10
-- PostgreSQL 8.4.7 postgresql-client pgadmin3
+- PostgreSQL 8.4.7 postgresql-client pgadmin3 python-psycopg2
 - Nginx 0.7.67
 - python-setuptools python-dev build-essential
 - pip 0.8.3
@@ -37,6 +37,7 @@ Our installation process:
     $ cd /srv/python-environments
     $ virtualenv --no-site-packages --distribute featuresapp
     $ source featuresapp/bin/activate
+    $ sudo apt-get build-dep python-psycopg2
     $ sudo pip install Django -E featuresapp
     $ sudo pip install gunicorn -E featuresapp
     $ sudo aptitude install rysnc

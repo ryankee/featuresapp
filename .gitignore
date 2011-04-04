@@ -1,3 +1,4 @@
 *.pyc
 private_info.py
 *.db
+production_settings.py
