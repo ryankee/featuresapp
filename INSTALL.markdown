@@ -68,4 +68,7 @@ Once the production server is set up we do the following:
     }
     $ fab fresh_deploy
 
-At this point featuresapp should be running on the server.
+At this point you should be able to deploy any new features you
+develop with the following:
+
+    $ fab deploy
