@@ -17,6 +17,7 @@ currently looks like this:
 - virtualenv 1.5.2
 - Django 1.3
 - gunicorn 0.12.1
+- rsync 3.0.7
 
 Our installation process:
 
@@ -38,3 +39,4 @@ Our installation process:
     $ source featuresapp/bin/activate
     $ sudo pip install Django -E featuresapp
     $ sudo pip install gunicorn -E featuresapp
+    $ sudo aptitude install rysnc
