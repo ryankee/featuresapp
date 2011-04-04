@@ -1,4 +1,4 @@
 *.pyc
-private_info.py
 *.db
+private_info.py
 production_settings.py
