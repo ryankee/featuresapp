@@ -1,2 +1,0 @@
-cd featuresapp
-./manage.py runserver
