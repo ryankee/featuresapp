@@ -1,4 +1,8 @@
-from django.shortcuts import render_to_response
+from django.views.generic.simple import direct_to_template
+from featuresapp.features.models import Feature
 
 def personal(request):
-    return render_to_response('people/personal.html')
+    extra_context = {
+        'high_priority': Feature.objects.all()[:5]
+    }
+    return direct_to_template(request, 'people/personal.html', extra_context=extra_context)

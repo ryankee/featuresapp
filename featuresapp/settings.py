@@ -120,6 +120,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'south',
     'people',
+    'features',
 )
 
 # A sample logging configuration. The only tangible logging
